@@ -1,0 +1,48 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes                                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: melalj <mouadelalj@gmail.com>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/06/29 01:39:11 by melalj            #+#    #+#              #
+#    Updated: 2019/08/10 00:22:10 by melalj           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+to_check :
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+check error msgs need to be writen in the fd 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+termcaps : 
+-------------------------------------------------------------------------------
+signal CTRL_C
+protect the termcaps from the env
+-------------------------------------------------------------------------------
+free ?!!
+*******************************************************************************
+
+*******************************************************************************
+-> > :  ?? tries to open the files for writing first if it fails the hole command fails.
+-> > : read from fd to check it ; ----- 0x0
+-> > : pipe> prompt !!!!!!!
+-> > :  ls -la 8>file
+-> > : ls > file | cat -e
+-> > : asf 2>&-
+-> > : echo sdg > file >file2
+-> > : cat << ok "need to exit the here doc"
+-> > : ls | cat 3> ok
+done !!!!!!!!!!!!!!!!!
+-> > : >&-
+-> > : ls 3&>FILE abbah === ls 3 abbah &>FILE
+-> > : > &file : pasre error
+-> > : >&FILE : redirection error and output to file same as &> 
+-> > : ls -al 2>&&3
+****
+bash-3.2$ ls 2>&FILE             
+bash: FILE: ambiguous redirect  ?>>>>>>> OK
+****
+leaking fds >>>> OK
+
+done >> parsing errors need to be added
+-> > : process stay in the background in a chained pipes (need to save the pid of all the child in a array then kill them)
